@@ -1,0 +1,354 @@
+/* Genel Stiller */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Stilleri */
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 20px 0; /* Üst ve alt boşluk artırıldı */
+    text-align: left;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-container { /* Yeni container eklendi */
+    width: 80%;
+    margin: 0 auto; /* Yatayda ortala */
+    display: flex;
+    justify-content: space-between; /* Başlık ve menüyü ayır */
+    align-items: center; /* Dikeyde ortala */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px; /* Başlık boyutu */
+}
+
+header h1 a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block; /* Inline-block yapıldı */
+    margin-left: 25px; /* Sol boşluk artırıldı */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* İlk madde sol boşluğunu kaldır */
+}
+
+nav ul li a {
+    color: #555; /* Menü link rengi */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px; /* Menü font boyutu */
+}
+
+/* Container ve İçerik Alanı Stilleri */
+.container {
+    width: 80%;
+    margin: 20px auto; /* Üst ve alt boşluk eklendi, yatayda ortala */
+    display: flex;
+    padding: 0; /* Container iç boşluğunu kaldır */
+}
+
+main {
+    flex: 70%;
+    padding-right: 30px; /* Sağ boşluk artırıldı */
+}
+
+aside {
+    flex: 30%;
+    background-color: transparent;
+    padding: 0;
+}
+
+.adsense-area { /* Genel reklam alanı stili */
+    text-align: center;
+    margin-bottom: 25px; /* Alt boşluk artırıldı */
+}
+
+.top-adsense { /* Üst reklam alanı - isteğe bağlı stil */
+    margin-top: 10px; /* Üst boşluk (isteğe bağlı) */
+}
+
+.sidebar-adsense { /* Kenar çubuğu reklam alanı - isteğe bağlı stil */
+    margin-bottom: 30px; /* Alt boşluk (isteğe bağlı) */
+}
+
+
+/* Blog Yazısı Stilleri */
+.blog-post {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: none;
+}
+
+.blog-post h2 {
+    margin-top: 0;
+    font-size: 28px; /* Başlık boyutu artırıldı */
+    line-height: 1.4;
+    margin-bottom: 20px; /* Başlık alt boşluğu artırıldı */
+}
+
+.blog-post h2 a {
+    color: #222;
+    text-decoration: none;
+}
+
+.post-meta {
+    color: #777;
+    font-size: 14px; /* Tarih boyutu ayarlandı */
+    margin-bottom: 25px; /* Tarih alt boşluğu artırıldı */
+}
+
+.blog-post img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px; /* Resim alt boşluğu artırıldı */
+    border-radius: 0;
+}
+
+.blog-post p { /* Blog yazısı paragraf stili */
+    font-size: 16px; /* Yazı boyutu ayarlandı */
+    line-height: 1.7; /* Satır yüksekliği ayarlandı */
+    margin-bottom: 20px; /* Paragraf alt boşluğu */
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 25px; /* İç boşluk artırıldı */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px; /* Üst boşluk artırıldı */
+    font-weight: bold;
+    font-size: 16px; /* Yazı boyutu ayarlandı */
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+/* Kenar Çubuğu Stilleri */
+aside {
+    padding-left: 20px; /* Sol boşluk eklendi (ana içerikten ayırmak için) */
+}
+
+.sidebar-section {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 30px; /* Alt boşluk artırıldı */
+    border-radius: 0;
+}
+
+.sidebar-section h3 {
+    margin-top: 0;
+    font-size: 18px; /* Başlık boyutu ayarlandı */
+    margin-bottom: 15px; /* Başlık alt boşluğu artırıldı */
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 8px; /* Başlık alt çizgi boşluğu artırıldı */
+}
+
+.sidebar-section ul {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-section ul li {
+    padding-bottom: 12px; /* Madde alt boşluğu artırıldı */
+    border-bottom: 1px dotted #ccc;
+}
+
+.sidebar-section ul li:last-child {
+    border-bottom: none; /* Son madde alt çizgisini kaldır */
+}
+
+.sidebar-section ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px; /* Link boyutu ayarlandı */
+}
+
+.social-icons {
+    margin-top: 15px; /* Sosyal ikonlar üst boşluk artırıldı */
+    text-align: center; /* İkonları ortala */
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px; /* İkonlar arası yatay boşluk ve kenar boşluğu eklendi */
+}
+
+.social-icons img {
+    width: 35px; /* İkon boyutu ayarlandı */
+    height: 35px; /* İkon boyutu ayarlandı */
+    opacity: 0.8;
+    transition: opacity 0.3s ease; /* Opaklık geçiş efekti */
+}
+
+.social-icons img:hover { /* İkon üzerine gelince */
+    opacity: 1; /* Tam opaklık */
+}
+
+
+/* Footer Stilleri */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0; /* İç boşluk artırıldı */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px; /* Yazı boyutu ayarlandı */
+}
+
+.footer-container { /* Yeni container eklendi */
+    width: 80%;
+    margin: 0 auto; /* Yatayda ortala */
+}
+
+
+/* Mobil Cihazlar İçin Medya Sorgusu */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        flex-direction: column;
+        margin-top: 10px; /* Üst boşluk azaltıldı */
+        margin-bottom: 10px; /* Alt boşluk azaltıldı */
+    }
+
+    main {
+        flex: 100%;
+        padding-right: 0;
+    }
+
+    aside {
+        flex: 100%;
+        margin-top: 30px; /* Üst boşluk artırıldı */
+        padding-left: 0; /* Sol boşluk kaldırıldı */
+    }
+
+    header {
+        padding: 15px 0; /* Header boşluğu azaltıldı */
+        text-align: center; /* Başlığı ortala */
+    }
+
+    .header-container { /* Mobil header container */
+        flex-direction: column; /* İçeriği alt alta sırala */
+        text-align: center; /* İçeriği ortala */
+        width: 95%; /* Genişliği ayarla */
+    }
+
+    header h1 {
+        float: none; /* Başlığı float özelliğini kaldır */
+        margin-bottom: 10px; /* Başlık alt boşluğu */
+        font-size: 24px; /* Başlık boyutu küçültüldü */
+    }
+
+    nav {
+        float: none; /* Menü float özelliğini kaldır */
+        margin-right: 0; /* Menü sağ boşluğunu kaldır */
+        padding-top: 0; /* Menü üst boşluğunu kaldır */
+    }
+
+    nav ul li {
+        display: block; /* Alt alta sırala */
+        margin-left: 0; /* Sol boşluğu kaldır */
+        margin-bottom: 10px; /* Madde alt boşluğu */
+    }
+
+    nav ul li:last-child {
+        margin-bottom: 0; /* Son madde alt boşluğunu kaldır */
+    }
+
+    .adsense-area { /* Mobil reklam alanı stili */
+        margin-bottom: 15px; /* Alt boşluk azaltıldı */
+    }
+
+    .top-adsense { /* Mobil üst reklam alanı */
+        margin-top: 0; /* Üst boşluğu kaldır */
+    }
+
+    .sidebar-adsense { /* Mobil kenar çubuğu reklam alanı */
+        margin-bottom: 20px; /* Alt boşluğu azaltıldı */
+    }
+
+    .blog-post {
+        padding: 20px; /* İç boşluğu azaltıldı */
+        margin-bottom: 20px; /* Alt boşluğu azaltıldı */
+    }
+
+    .blog-post h2 {
+        font-size: 24px; /* Başlık boyutu küçültüldü */
+        margin-bottom: 15px; /* Başlık alt boşluğu azaltıldı */
+    }
+
+    .post-meta {
+        margin-bottom: 20px; /* Tarih alt boşluğu azaltıldı */
+    }
+
+    .blog-post img {
+        margin-bottom: 20px; /* Resim alt boşluğu azaltıldı */
+    }
+
+    .blog-post p, .read-more { /* Yazı ve buton boyutları */
+        font-size: 15px; /* Yazı boyutunu küçült */
+    }
+
+    .sidebar-section {
+        margin-bottom: 25px; /* Bölüm alt boşluğu azaltıldı */
+    }
+
+    .sidebar-section h3 {
+        font-size: 16px; /* Başlık boyutu küçültüldü */
+        margin-bottom: 12px; /* Başlık alt boşluğu azaltıldı */
+        padding-bottom: 6px; /* Başlık alt çizgi boşluğu azaltıldı */
+    }
+
+    .sidebar-section ul li {
+        padding-bottom: 10px; /* Madde alt boşluğu azaltıldı */
+    }
+
+    .sidebar-section ul li a {
+        font-size: 14px; /* Link boyutu küçültüldü */
+    }
+
+    .social-icons {
+        margin-top: 10px; /* Sosyal ikonlar üst boşluğu azaltıldı */
+    }
+
+    .social-icons img {
+        width: 30px; /* İkon boyutu küçültüldü */
+        height: 30px; /* İkon boyutu küçültüldü */
+    }
+
+    footer {
+        padding: 20px 0; /* Footer iç boşluğu azaltıldı */
+        font-size: 13px; /* Footer yazı boyutu küçültüldü */
+    }
+
+    .footer-container { /* Mobil footer container */
+        width: 95%; /* Genişliği ayarla */
+    }
+}
